@@ -1,6 +1,7 @@
 # arduino-candle
 An Arduino Candle LED
 
+### Pinout
 ```
         +--_--+
    RST -|1   8|- 5V
@@ -8,4 +9,17 @@ An Arduino Candle LED
 (A2) 4 -|3   6|- 1 (PWM)
    GND -|4   5|- 0 (PWM)
         +-----+
+```
+### Circuit
+```
+LDR:
+5V---LDR-+-R2---GND
+         |
+         A2
+LED:
+0---LED---R1---GND
+
+R1 = ~220ohm
+R2 = ~2.2Kohm
+
 ```
