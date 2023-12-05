@@ -2,14 +2,13 @@
 #include <Flame.h>
 #include <LowPower.h>
 
-// #define VERBOSE
-
 #define SLPTIME 24 // seconds
 
 #if defined(__AVR_ATtiny85__)
 #define ledPin1 0
 #define ldrPin1 A2
 #else
+#define VERBOSE
 #define ledPin1 10
 #define ldrPin1 A0
 #endif
@@ -21,6 +20,10 @@ int ldrValue = 0;
 
 void blinkLED(int numBlinks)
 {
+#ifdef VERBOSE
+  Serial.print(F("> LED: BLINK "));
+  Serial.println(numBlinks);
+#endif
   for (int i = 0; i < numBlinks; ++i)
   {
     digitalWrite(ledPin1, HIGH);
