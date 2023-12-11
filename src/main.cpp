@@ -62,7 +62,7 @@ void setup()
 #endif
   blinkLED(3);
   pinMode(ldrPin1, INPUT);
-  flame1.setup(ledPin1, 50, 100);
+  flame1.setup(ledPin1, 20, 100);
 }
 
 void loop()
